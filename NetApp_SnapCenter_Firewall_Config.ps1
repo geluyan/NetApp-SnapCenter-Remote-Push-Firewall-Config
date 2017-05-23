@@ -9,7 +9,7 @@
 #####################################################
 
 #SnapCenter IP Address
-$snapcenterServer = 10.4.192.59
+$snapcenterServer = xx.xx.xx.xx
 
 # DO NOT EDIT BELOW #
 #####################
@@ -18,4 +18,4 @@ New-NetFirewallRule -DisplayName "SnapCenter (SMCore HTTP Communication Port)" -
 New-NetFirewallRule -DisplayName "SnapCenter (NetBios)" -Action Allow -Direction Inbound -Enabled True -Group "NetApp SnapCenter" -LocalPort 137 -Profile Any -Protocol UDP -RemoteAddress $snapcenterServer
 New-NetFirewallRule -DisplayName "SnapCenter (DCE/RPC)" -Action Allow -Direction Inbound -Enabled True -Group "NetApp SnapCenter" -LocalPort 135 -Profile Any -Protocol TCP -RemoteAddress $snapcenterServer
 New-NetFirewallRule -DisplayName "SnapCenter (SMB-In)" -Action Allow -Direction Inbound -Enabled True -Group "NetApp SnapCenter" -LocalPort 445 -Profile Any -Protocol TCP -RemoteAddress $snapcenterServer
-New-NetFirewallRule -DisplayName "SnapCenter (Background Intelligent Transfer Service [BITS ])" -Action Allow -Direction Inbound -Enabled True -Group "NetApp SnapCenter" -Profile Any -RemoteAddress $snapcenterServer -Service BITS
+New-NetFirewallRule -DisplayName "SnapCenter (Background Intelligent Transfer Service [BITSÂ ])" -Action Allow -Direction Inbound -Enabled True -Group "NetApp SnapCenter" -Profile Any -RemoteAddress $snapcenterServer -Service BITS
